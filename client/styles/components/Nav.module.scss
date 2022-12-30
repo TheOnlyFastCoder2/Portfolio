@@ -1,0 +1,97 @@
+@import '../variables';
+
+.Nav {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: $navHeight;
+  padding-left: $offsetX;
+  padding-right: $offsetX;
+  box-shadow: 0 0 0 1px $cf_dark900;
+
+  .menu {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    li {
+      font-size: 16px;
+      cursor: pointer;
+      text-transform: capitalize;
+      a {
+        color: $cf_light900;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/// Mobile Version
+.Nav {
+  button {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px 0;
+
+    width: 34px;
+    height: 34px;
+    border:none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+
+    hr {
+      background-color: none;
+      border-radius: $radius800;
+      border: 2px solid rgba($color: $c_purple900, $alpha: 0.8);
+    }
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .Nav {
+    button {display: flex;}
+
+ 
+
+    .menu {
+      position: fixed;
+      top: $navHeight;
+      left:0;
+      
+      width: 100vw;
+      min-width: $minWidth;
+      height: calc(100vh - #{$navHeight});
+      padding-top: $offsetY;
+
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      
+      background-color: $c_dark800;
+      z-index: 999;
+
+      &.active{
+        display: flex;
+      }
+      
+      
+      li {
+        width: 80%;
+        text-align: center;
+        padding: 20px;
+        font-weight: 600;
+        border: 1px solid rgba($color: $c_purple900, $alpha: 0.5);
+        background-color: $c_dark900;
+      }
+    }
+  }
+}

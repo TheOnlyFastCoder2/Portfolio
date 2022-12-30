@@ -1,0 +1,76 @@
+@import '../variables';
+
+$heightTopPanel: 46px;
+$purple: rgba($color:$c_purple900, $alpha: 0.2);
+
+.Notification {
+  position: absolute;
+  bottom: 10px;
+  right: 40px;
+
+  width: 451px;
+  height: 230px;
+  border-radius: $radius800;
+
+  background: rgba(36, 42, 57, 0.4);
+  border: 1px solid $c_purple900;
+  backdrop-filter: blur(10px);
+
+  // opacity: 0.48;
+
+  transform: translateX(200%);
+  transition: transform 1s;
+
+  &.active {
+    transform: translateX(0);
+  }
+
+  .topPanel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    height: $heightTopPanel;
+    width: 100%;
+    padding: 0 20px;
+    background-color: rgba($color:$c_dark900, $alpha: 0.5);
+    border-bottom: 1px solid $purple;
+    border-radius: $radius800;
+    
+    svg {
+      cursor: pointer;
+      path {
+        fill: rgba($color: $c_purple900, $alpha: 0.6);
+      }
+    }
+  }
+  
+  .container {
+    width: 100%;
+    height: calc(100% - #{$heightTopPanel});
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px 50px;
+    border-radius: $radius800;
+  }
+
+  p {
+    font-size: 21px;
+    font-style: italic;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: 0.04em;
+  }
+}
+
+
+@media only screen and (max-width: 1600px) {
+  .Notification {
+  
+    p {
+      font-size:21px;
+      line-height: 28px;
+    }
+  }
+}
