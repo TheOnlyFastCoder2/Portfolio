@@ -29,13 +29,15 @@ export default function () {
           <div className={`${st.info} ${st.skills}`}>
             <h3>Скилы</h3>
             <div className={st.container}>
-              <span>TypeScript</span>
-              <span>Javascript</span>
-              <span>SCSS/CSS</span>
-              <span>Python</span>
               <span>HTML</span>
-              <span>JQuery</span>
+              <span>SCSS/CSS</span>
+              <span>Javascript</span>
+              <span>TypeScript</span>
               <span>React</span>
+              <span>NextJS</span>
+              <span>Redux</span>
+              <span>JQuery</span>
+              <span>Python</span>
               
             </div>
           </div>
@@ -58,7 +60,11 @@ export default function () {
         <div className={st.container}>
           <div className={`${st.info} ${st.education}`}>
             <h3>О себе</h3>
-            <p>В основном создаю мини приложения с помощью react через фреймворк Tauri в качестве хобби и не норовился касаться коммерческой разработки. Готов усваивать новые технологии, выходить за рамки своего обычного стека, ответственно относиться к работе, придерживаться различных методов разработки принятых в команде.</p>
+            <p>
+              В основном создаю мини приложения с помощью react в качестве хобби.
+              Готов выполнять качественный, чистый, логичный код, выполненный вручную с использованием нужных технологий.
+              Если вдруг какие-то недочеты после исполнения работы, я их исправляю, никуда не пропадаю - это мой основной вид деятельности.
+            </p>
           </div>
         </div>
         
