@@ -1,6 +1,4 @@
 # dependencies
-projects.json
-
 node_modules
 /.pnp
 .pnp.js
