@@ -9,7 +9,7 @@
     gap: 20px;
     grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
     grid-auto-flow: dense;
-    justify-items: center;
+    justify-items: self-start;
     
     padding: 0 $offsetX;
     margin: 0 auto;
@@ -100,10 +100,26 @@
   }
 }
 
-@media only screen and (max-width: 1039px) {
+@media only screen and (max-width: 1035px) {
   .Portfolio {
+    .container {
+      grid-template-columns: 1fr;
+    }
+
     .card {
       width: 100%;
     }
   }
 }
+
+@media only screen and (max-width: 450px) {
+  .Portfolio {
+    .card {
+      &_boxImg a h2 {
+        font-size: 32px;
+      }
+    }
+  }
+}
+
+
