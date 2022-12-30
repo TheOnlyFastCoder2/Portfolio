@@ -10,7 +10,7 @@
   height: $navHeight;
   padding-left: $offsetX;
   padding-right: $offsetX;
-  box-shadow: 0 0 0 1px $cf_dark900;
+  box-shadow: inset 0 -1px 0 0 $cf_dark900;
 
   .menu {
     width: 100%;

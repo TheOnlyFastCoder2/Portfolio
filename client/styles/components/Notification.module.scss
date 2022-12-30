@@ -9,7 +9,7 @@ $purple: rgba($color:$c_purple900, $alpha: 0.2);
   right: 2%;
 
   width: 451px;
-  height: 230px;
+  min-height: 230px;
   border-radius: $radius800;
 
   background: rgba(36, 42, 57, 0.4);
