@@ -24,7 +24,8 @@ export default function () {
         {
           [
             {name:"главная", link: '/'},
-            {name:"О себе", link: '/About'}
+            {name:"О себе", link: '/About'},
+            {name:"Портфолио", link: '/Portfolio'}
 
           ].map ( ({name,link}, ind) => {
             return (
