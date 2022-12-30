@@ -22,9 +22,32 @@
     gap: 20px;
 
     li {
-      font-size: 16px;
+      position: relative;
+      font-size: 20px;
+      font-weight: 600;
       cursor: pointer;
       text-transform: capitalize;
+      
+      &.active, &:hover {
+        a::before  {
+          opacity: 1;
+        }
+      }
+
+      a::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 120%;
+        left: 15%;
+        width: 70%;
+        height: 5px;
+        border-radius: $radius800;
+        background: rgba($color: $c_purple900, $alpha: 0.5);
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      
       a {
         display: block;
         width: 100%;

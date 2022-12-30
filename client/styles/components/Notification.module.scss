@@ -9,7 +9,7 @@ $purple: rgba($color:$c_purple900, $alpha: 0.2);
   right: 2%;
 
   width: 451px;
-  min-height: 230px;
+  min-height: 180px;
   border-radius: $radius800;
 
   background: rgba(36, 42, 57, 0.4);
@@ -47,7 +47,7 @@ $purple: rgba($color:$c_purple900, $alpha: 0.2);
   
   .container {
     width: 100%;
-    height: calc(100% - #{$heightTopPanel});
+    min-height: calc(180px - #{$heightTopPanel});
     display: flex;
     justify-content: center;
     background: rgba(0, 0, 0, 0.1);
