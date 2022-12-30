@@ -7,7 +7,6 @@ import Notification from 'components/Notification';
 
 export default function Home() {
 
-
   return (
     <MainLayout title={"Home"}>
         <div className={`${st.Home}`}>
