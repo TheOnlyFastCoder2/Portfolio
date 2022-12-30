@@ -6,7 +6,7 @@ $purple: rgba($color:$c_purple900, $alpha: 0.2);
 .Notification {
   position: absolute;
   bottom: 10px;
-  right: 40px;
+  right: 2%;
 
   width: 451px;
   height: 230px;
@@ -72,5 +72,11 @@ $purple: rgba($color:$c_purple900, $alpha: 0.2);
       font-size:21px;
       line-height: 28px;
     }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .Notification {
+    width: 90%;
   }
 }

@@ -36,6 +36,7 @@ export default function () {
               <span>HTML</span>
               <span>JQuery</span>
               <span>React</span>
+              
             </div>
           </div>
 

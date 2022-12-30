@@ -18,8 +18,8 @@ export default function () {
     <div className={`${st.Nav}`}>
       <img src={PLogo.src}/>
         <ul className={`${st.menu} ${mode ? st.active : "" }`}>
-        <li><Link href={'/'}>Дом</Link></li>
-        <li><Link href={'/About'}>О себеho</Link></li>
+        <li><Link href={'/'}>главная</Link></li>
+        <li><Link href={'/About'}>О себе</Link></li>
       </ul>
       <button onClick={toggleMenu}><hr/><hr/><hr/></button>
     </div>
