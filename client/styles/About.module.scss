@@ -26,7 +26,8 @@
   padding: 0 $offsetX;
   padding-top: 40px;
   height: 100%;
-  overflow: scroll;
+  overflow-y: scroll;
+
 
   & > * {
     z-index: 1;
@@ -71,7 +72,10 @@
     margin-top: 20px;
     font-size: 18px;
     @extend %BoxStyle3;
-    
+
+    .info {
+      height: 248px;
+    }
     .contacts {
       width: min(520px, 100%);
 
@@ -89,11 +93,11 @@
   
     .skills {
       width: min(520px, 100%);
-
+      
       .container {
         gap: 10px 20px;
         flex-wrap: wrap;
-        overflow: scroll;
+        overflow-y: scroll;
         height: 80%;
 
         span {

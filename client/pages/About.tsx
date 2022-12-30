@@ -38,7 +38,6 @@ export default function () {
               <span>Redux</span>
               <span>JQuery</span>
               <span>Python</span>
-              
             </div>
           </div>
 
