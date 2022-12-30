@@ -7,10 +7,11 @@
   .container {
     display: grid;
     gap: 20px;
-    padding: 0 $offsetX;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+    grid-auto-flow: dense;
     justify-items: center;
     
+    padding: 0 $offsetX;
     margin: 0 auto;
     padding-top: 50px;
 
@@ -28,6 +29,7 @@
     overflow: hidden;
 
     &_boxImg {
+      position: relative;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -35,9 +37,12 @@
       overflow: hidden;
       background: black;
 
+     
       a {
         position: absolute;
         z-index: 10;
+        transition: opacity 0.5s;
+
         h2 {
           font-size: 44px;
           font-style: italic;
@@ -48,7 +53,13 @@
       img {
         position: relative;
         width: 100%;
-        opacity: 0.5;
+        opacity: 0.3;
+        transition: opacity 0.5s;
+      }
+
+      &:hover {
+        img {opacity: 0.5;}
+        a {opacity: 0;}
       }
     }
 
@@ -85,6 +96,14 @@
           }
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 1039px) {
+  .Portfolio {
+    .card {
+      width: 100%;
     }
   }
 }
