@@ -30,7 +30,7 @@ export default function () {
             return (
               <li 
                 key={ind}
-        
+                // className={ ind === indButton ? st.active : ""}
                 onClick={() => setButton(ind)}>
                 <Link href={link}>{name}</Link>
               </li>

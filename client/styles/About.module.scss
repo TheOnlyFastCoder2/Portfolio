@@ -80,7 +80,7 @@
       width: min(520px, 100%);
 
       .container {
-        width: min(420px, 100%);
+        width: min(520px, 100%);
         gap: 0 43px;
         padding: 20px 5%;
         align-items: center;
@@ -92,15 +92,18 @@
     }
   
     .skills {
-      width: min(520px, 100%);
+      width: min(420px, 100%);
       
       .container {
-        gap: 10px 20px;
+        gap: 0px 20px;
+        align-items: flex-start;
         flex-wrap: wrap;
         overflow-y: scroll;
         height: 80%;
 
+
         span {
+          align-self: flex-start;
           display: flex;
           align-items: center;
           height: 50px;
@@ -168,7 +171,7 @@
   }
 }
 
-@media only screen and (max-width: 1139px) {
+@media only screen and (max-width: 1083px) {
   .About {
     // width: min(918px, 100%);
     // margin: auto;
@@ -180,16 +183,15 @@
 
       .education, .skills, .contacts {
         width: min(918px, 100%);
-        margin: auto;
       }
     }
 
     .info {
       h3 {
-        font-size: 18px;
+        font-size: 19px;
       }
       .test h4  {
-        font-size: 16px;
+        font-size: 17px;
       }
     }
   }

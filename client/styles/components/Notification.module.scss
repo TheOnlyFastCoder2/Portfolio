@@ -53,6 +53,8 @@ $purple: rgba($color:$c_purple900, $alpha: 0.2);
     background: rgba(0, 0, 0, 0.1);
     padding: 20px 50px;
     border-radius: $radius800;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
   }
 
   p {

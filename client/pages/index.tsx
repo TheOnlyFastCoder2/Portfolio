@@ -21,7 +21,7 @@ export default function Home() {
 
           <Notification>
             Внимание сайт еще не стабилен
-            и еще находится в разработке :)
+            и находится в разработке :)
           </Notification>
         </div>
     </MainLayout>
