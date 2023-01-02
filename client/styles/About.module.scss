@@ -74,7 +74,7 @@
     @extend %BoxStyle3;
 
     .info {
-      height: 248px;
+      min-height: 248px;
     }
     .contacts {
       width: min(520px, 100%);
@@ -192,6 +192,19 @@
       }
       .test h4  {
         font-size: 17px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  .About {
+    .additionalinfo {
+      .education ,.contacts {
+        .container{
+          flex-direction: column;
+          text-align: center;
+        }
       }
     }
   }

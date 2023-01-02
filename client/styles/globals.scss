@@ -21,19 +21,22 @@
   }
 }
 
+body {
+  background-color: $c_dark900;
+}
 #root {
   position: relative;
   width: 100%;
 
-
-  // width: 1920px;
-  // height: 968px;
+  margin: auto;
+  max-width: 1920px;
+  max-height: 968px;
   // margin: auto;
   overflow: hidden;
   font-weight: 500;
   background-color: $c_dark900;
   color: $cf_light900;
-  
+  border:10px solid rgba($color: $cf_dark900, $alpha: 0.3);  
 
   main {
     width: 100%;

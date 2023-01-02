@@ -75,10 +75,13 @@
     cursor: pointer;
 
     hr {
+      $color: rgba($color: $c_purple900, $alpha: 0.8);
+
       width: 100%;
       background-color: none;
       border-radius: $radius800;
-      border: 2px solid rgba($color: $c_purple900, $alpha: 0.8);
+      background-color: $color;
+      border: 2px solid $color;
     }
   }
 }

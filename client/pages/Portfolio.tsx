@@ -6,17 +6,15 @@ import IcongGithub from 'lib/icons/github';
 import IcongWebsite from 'lib/icons/website';
 
 import MainLayout from 'components/MainLayout';
-import Notification from 'components/Notification';
 
-console.log(projects)
 export default function Home() {
   return (
     <MainLayout title={"Portfolio"}>
       <div className={`${st.Portfolio}`}>
           <div className={st.container}>
-            {projects.map(({git, website, img}, i) => {
-
-              const name = git.match(/\/\w+\/$/gm)[0].replace(/\//gm, "");
+            {projects.map(({git, title, website, img}, i) => {
+             
+              const name = title !== undefined ? title : git.match(/\/\w+\/$/gm)[0].replace(/\//gm, "");
 
               return (
                 <div key={i} className={st.card}>
