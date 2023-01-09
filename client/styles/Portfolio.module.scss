@@ -119,8 +119,26 @@
       &_boxImg a h2 {
         font-size: 32px;
       }
+
+      &_panel {
+        a {font-size: 14px;}
+        svg  {width: 24px; height: 24px;}
+      }
     }
   }
 }
 
+@media only screen and (max-width: 320px) {
+  .Portfolio {
+    .card {
+      &_boxImg a h2 {
+        font-size: 32px;
+      }
 
+      &_panel {
+        justify-content: space-between;
+        svg  {display: none;}
+      }
+    }
+  }
+}
