@@ -31,9 +31,9 @@ export default function () {
 
     <div className={`${st.card} ${st.networks}`}>
       <div className={st.container}>
-        <a href=""><SVGDiscord/></a>
-        <a href=""><SVGTelegram /></a>
-        <a href=""><SVGVK/></a>
+        <a href="https://discord.com/channels/1068950798094045245" target={"_blank"}><SVGDiscord/></a>
+        <a href="https://t.me/qtpy0101" target={"_blank"}><SVGTelegram /></a>
+        <a href="https://vk.com/po_sasha" target={"_blank"}><SVGVK/></a>
       </div>
     </div>
 
@@ -41,7 +41,7 @@ export default function () {
       <h3>О себе</h3>
       <div className={st.container}>
         <p>
-          На данный момент у меня 2 мини проекта , один  содержит в себе мини игры для тренировки памяти, а 2-рой проект представляет из себя  музыкальную игру для тренировки скорости печати. На сегодняшний день делаю 3 проект для портфолию - сервис для покупки блюд, но на данный момент еще не добавил его на свой сайт:
+          
         </p>
       </div>
     </div>
