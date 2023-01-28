@@ -3,6 +3,7 @@ import SVGGithub from 'lib/icons/Github'
 import SVGWebsite from 'lib/icons/Website'
 import st from 'styles/components/Projects.module.scss'
 import JSONProjects from 'lib/projects.json';
+import Link from 'next/link';
 
 
 export default function () {
@@ -11,9 +12,11 @@ export default function () {
     {JSONProjects.map((cardProject,i) => {
       return (
         <div className={st.project}>
-          <div className={st.main}>
-            <img src={cardProject.img} alt="" />
-          </div>
+          <Link href={cardProject.website} target="_blank">
+            <div className={st.main}>
+              <img src={cardProject.img} alt="" />
+            </div>
+          </Link>
           <div className={st.footer}>
             <div className={st.name}>
               <span>{cardProject.title}</span>

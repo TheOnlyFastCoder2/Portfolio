@@ -27,7 +27,7 @@ html {background: $c_dark900;}
   position: relative;
   max-width: 1920px;
   min-width: 350px;
-
+  min-height: 100vh;
   margin: auto;
   background: $c_background;
   box-shadow: 10px 0 30px 10px rgba($color: #000000, $alpha: 0.6);
