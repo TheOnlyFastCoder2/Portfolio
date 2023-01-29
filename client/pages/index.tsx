@@ -10,7 +10,6 @@ export default function Home() {
   return (
     <MainLayout title={"Home"}>
       <div className={st.Home}>
-        <AboutMe/>
         <Projects/>
       </div>
     </MainLayout>

@@ -7,7 +7,7 @@
   padding:0;
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-
+  letter-spacing: 0.06em;
   // &::-webkit-scrollbar {
   //   width: 5px;               /* ширина scrollbar */
   // }
@@ -24,6 +24,7 @@
 html {background: $c_dark900;}
 #root {
   display: flex;
+  flex-direction: column;
   position: relative;
   max-width: 1920px;
   min-width: 350px;
@@ -36,12 +37,6 @@ html {background: $c_dark900;}
     width: min(1684px,95%);
     margin:0 auto;
     padding:0 20px;
-    padding-top: 66px;
-    // background: green;
-  }
-
-  @media only screen and (max-width:1024px) {
-    flex-direction: column;
   }
 }
 

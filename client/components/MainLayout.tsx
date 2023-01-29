@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import TopBar from './Topbar'
 import Nav from './Nav'
 
 export default function ({children, title}) {
@@ -13,6 +14,7 @@ export default function ({children, title}) {
           <meta http-equiv="X-UA-Compatible" content="IE=edge" />
           <meta charSet="UTF-8" />
       </Head>
+      <TopBar/>
       <Nav/>
       <main>
         {children}

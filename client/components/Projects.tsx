@@ -11,7 +11,7 @@ export default function () {
   <div className={st.Projects}>
     {JSONProjects.map((cardProject,i) => {
       return (
-        <div className={st.project}>
+        <div className={st.project} key={i}>
           <Link href={cardProject.website} target="_blank">
             <div className={st.main}>
               <img src={cardProject.img} alt="" />

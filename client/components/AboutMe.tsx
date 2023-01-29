@@ -3,6 +3,8 @@ import SVGDiscord from 'lib/icons/Discord'
 import SVGTelegram from 'lib/icons/Telegram'
 import SVGVK from 'lib/icons/VK'
 
+import Link from 'next/link'
+
 export default function () {
   return (
         
@@ -31,9 +33,9 @@ export default function () {
 
     <div className={`${st.card} ${st.networks}`}>
       <div className={st.container}>
-        <a href="https://discord.com/channels/1068950798094045245" target={"_blank"}><SVGDiscord/></a>
-        <a href="https://t.me/qtpy0101" target={"_blank"}><SVGTelegram /></a>
-        <a href="https://vk.com/po_sasha" target={"_blank"}><SVGVK/></a>
+        <Link href="https://discord.com/channels/1068950798094045245" target={"_blank"}><SVGDiscord/></Link>
+        <Link href="https://t.me/qtpy0101" target={"_blank"}><SVGTelegram /></Link>
+        <Link href="https://vk.com/po_sasha" target={"_blank"}><SVGVK/></Link>
       </div>
     </div>
 

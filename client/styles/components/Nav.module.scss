@@ -2,22 +2,49 @@
 
 .Nav {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 113px;
-  gap: 10px;
-  padding: 22px 20px;
-  background:  $c_dark900;
-  border-right: $border800;
+  justify-content: flex-start;
+  width: min(1684px,95%);
 
-  svg {
-    * {fill: $c_light900}
+  height: 39px;
+  margin: 40px auto;
+  padding: 0 30px; // +10px
+
+  a {
+    text-decoration: none;
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
   }
 
-  @media only screen and (max-width:1024px) {
-   width: 100%;
-   height: 75px;
-   border-right: none;
-   border-bottom:  $border800;
+  li {
+    position: relative;
+    width: 134px; 
+    height: 39px;
+    transform: skew(-30deg);
+    border: 0.2px solid $c_dark900;
+    cursor: pointer;
+
+    &:not(:first-child) {border-left: none;}
+    
+    
+    &.active {
+      background-color:  $c_dark900;
+      &::before {
+        color: $c_light900;
+      }
+    }
+    
+    &::before {
+      content: attr(data-text);
+      width: 100%;
+      height: 100%;
+      display: flex;
+      color:  $c_dark900;
+      transform: skew(30deg);
+      justify-content: center;
+      align-items: center;
+    }
   }
 }
+
+
+

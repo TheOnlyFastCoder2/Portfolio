@@ -1,40 +1,22 @@
-import React from 'react'
-
-// import Link from "next/link"
 import st from 'styles/components/Nav.module.scss'
-import SVGLogo from 'lib/icons/Logo'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
 
 export default function () {
+  const route = useRouter();
+
+  function isActive(pathName: string): string {
+    return route.pathname ===  pathName && st.active;
+  }
 
   return (
-   <div className={st.Nav}>
-      <SVGLogo/>
-
-   </div>
+    <ul className={st.Nav}>
+      <Link href={'/'}>
+        <li  className={isActive('/')} data-text={"Project"}/>
+      </Link>
+      <Link href={'/AboutMe'}>
+        <li className={isActive('/AboutMe')}data-text={"About Me"}/>
+      </Link>
+    </ul>
   )
 }
-
-
-// <div className={`${st.Nav}`}>
-// <img src={PLogo.src}/>
-//   <ul className={`${st.menu} ${mode ? st.active : "" }`}>
-//   {
-//     [
-//       {name:"главная", link: '/'},
-//       {name:"О себе", link: '/About'},
-//       {name:"Портфолио", link: '/Portfolio'}
-
-//     ].map ( ({name,link}, ind) => {
-//       return (
-//         <li 
-//           key={ind}
-//           // className={ ind === indButton ? st.active : ""}
-//           onClick={() => setButton(ind)}>
-//           <Link href={link}>{name}</Link>
-//         </li>
-//       )
-//     }) 
-//   }
-// </ul>
-// <button onClick={toggleMenu}><hr/><hr/><hr/></button>
-// </div>
