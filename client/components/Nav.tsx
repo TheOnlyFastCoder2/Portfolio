@@ -12,7 +12,7 @@ export default function () {
   return (
     <ul className={st.Nav}>
       <Link href={'/'}>
-        <li  className={isActive('/')} data-text={"Project"}/>
+        <li  className={isActive('/')} data-text={"Projects"}/>
       </Link>
       <Link href={'/AboutMe'}>
         <li className={isActive('/AboutMe')}data-text={"About Me"}/>
