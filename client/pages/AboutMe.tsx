@@ -20,7 +20,7 @@ export default function Home() {
         <div className={`${st.card} ${st.skills}`}>
           <h3>Скилы</h3>
           <div className={st.container}>
-            <span>HTML</span><span>CSS/CSS</span>
+            <span>HTML</span><span>SCSS/CSS</span>
             <span>NEXTJS</span><span>JavasScript</span>
             <span>TypeScript</span> <span>Redux/Toolkit</span>
           </div>
