@@ -21,7 +21,7 @@ export default function Home() {
           <h3>Скилы</h3>
           <div className={st.container}>
             <span>HTML</span><span>SCSS/CSS</span>
-            <span>NEXTJS</span><span>JavasScript</span>
+            <span>NEXTJS</span><span>JavaScript</span>
             <span>TypeScript</span> <span>Redux/Toolkit</span>
           </div>
         </div>
