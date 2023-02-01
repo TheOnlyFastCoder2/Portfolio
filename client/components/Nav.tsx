@@ -6,16 +6,16 @@ export default function () {
   const route = useRouter();
 
   function isActive(pathName: string): string {
-    return route.pathname ===  pathName && st.active;
+    return route.pathname ===  pathName ? st.active : undefined;
   }
 
   return (
     <ul className={st.Nav}>
       <Link href={'/'}>
-        <li  className={isActive('/')} data-text={"Projects"}/>
+        <li  className={isActive('/')} data-text={"Проекты"}/>
       </Link>
       <Link href={'/AboutMe'}>
-        <li className={isActive('/AboutMe')}data-text={"About Me"}/>
+        <li className={isActive('/AboutMe')}data-text={"О себе"}/>
       </Link>
     </ul>
   )

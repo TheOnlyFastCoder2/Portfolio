@@ -15,9 +15,8 @@
     height: 245px;
     border-radius: $radius900;
     border-bottom: 0.2px solid rgba($color:  $c_dark900, $alpha: 0.5);
-    // border: $border900;
-    // box-shadow: $boxShadow;
     overflow: hidden;;
+    
     &:hover .main > img{
       opacity: 0.8;
     }

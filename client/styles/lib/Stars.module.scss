@@ -1,0 +1,14 @@
+@import '../variables';
+
+.Stars {
+ 
+  &.clickAble {
+   cursor: pointer;
+  }
+
+  &.active {
+    svg path {
+      fill: $c_dark900;
+    }
+  }
+}

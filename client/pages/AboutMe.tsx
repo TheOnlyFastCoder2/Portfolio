@@ -9,14 +9,13 @@ import SVGVK from 'lib/icons/VK'
 import MainLayout from 'components/MainLayout'
 
 import Link from 'next/link'
+import Chat from 'components/Chat'
 
-
-export default function Home() {
+export default function AboutMe() {
 
   return (
-    <MainLayout title={"AboutMe"}>
+    <MainLayout title={"AboutMe"} className={"AboutMe"}>
       <div className={st.AboutMe}>
-
         <div className={`${st.card} ${st.skills}`}>
           <h3>Скилы</h3>
           <div className={st.container}>
@@ -61,6 +60,8 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Chat/>
     </MainLayout>
   )
 }
+
