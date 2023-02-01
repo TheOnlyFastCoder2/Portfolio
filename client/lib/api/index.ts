@@ -6,7 +6,6 @@ const config = (data,method) => {
   return  {
       data,
       method:method,
-      setTimeout: 1000,
       url:"https://api.jsonbin.io/v3/b/63d928f0ace6f33a22d14586",
       headers: {
           "Content-Type": "application/json",

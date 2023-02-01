@@ -7,5 +7,5 @@ export const initialState: IStore  = {
 }
 
 export type TAppContext = [IStore, React.Dispatch<IStore>];
-export const AppContext = createContext<TAppContext|undefined>(undefined)
+export const AppContext = createContext<TAppContext>([initialState, () => {}])
 
