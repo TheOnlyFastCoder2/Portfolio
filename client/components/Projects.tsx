@@ -6,13 +6,14 @@ import Link from 'next/link';
 
 import { AppContext, TAppContext  } from 'lib/context/app'
 import React, { useContext } from 'react';
+import JSONStore from 'lib/projects.json'
 
 export default function () {
-  const [store] = useContext<TAppContext>(AppContext);
+  // const [store] = useContext<TAppContext>(AppContext);
 
   return (
     <div className={st.Projects}>
-      {store.projects.map((cardProject,i) => {
+      {JSONStore.projects.map((cardProject,i) => {
         return (
           <div className={st.project} key={i}>
             <Link href={cardProject.website} target="_blank">

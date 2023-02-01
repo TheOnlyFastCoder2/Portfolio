@@ -60,7 +60,7 @@ export default function AboutMe() {
           </div>
         </div>
       </div>
-      <Chat/>
+      {/* <Chat/> */}
     </MainLayout>
   )
 }

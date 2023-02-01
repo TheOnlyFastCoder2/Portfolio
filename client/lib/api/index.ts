@@ -6,7 +6,7 @@ const config = (data,method) => {
   return  {
       data,
       method:method,
-      url:"https://api.jsonbin.io/v3/b/63d928f0ace6f33a22d14586",
+      url:"https://api.jsonbin.io/v3/b/63da6193ace6f33a22d2c16d",
       headers: {
           "Content-Type": "application/json",
           "X-Master-Key": "$2b$10$nrv8B7Q64n0D3vOfp5fEe.iLUfq9EDcsWMv3lc0QqT2cJxMQcLGAK"
@@ -16,7 +16,7 @@ const config = (data,method) => {
 
 const api= {
     async getStore (): Promise<IStore> {
-      const {data} = await axios(config(undefined,"get"));
+      const {data} = await axios(config(undefined,"post"));
       return (data.record as IStore);
     }, 
 
