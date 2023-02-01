@@ -119,7 +119,7 @@ export function Sender () {
           </div>
           <div className={st.container}>
             <input onChange={handleName} type="text" placeholder='имя'/>
-            <DropDown items={['ux/ui design', 'Frontend разработка']} callback={handleTypeTask}/>
+            <DropDown items={['ux/ui дизайн', 'Frontend разработка']} callback={handleTypeTask}/>
           </div>
         </div>
         <div className={st.sendBox}>
