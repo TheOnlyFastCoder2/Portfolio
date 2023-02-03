@@ -12,8 +12,6 @@ export interface IProjects {
   website: string
 }
 
-
-
 export default interface IState {
   reviews: IReviews[],
   projects: IProjects[],

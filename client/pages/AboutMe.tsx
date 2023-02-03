@@ -6,13 +6,15 @@ import SVGTelegram from 'lib/icons/Telegram'
 import SVGVK from 'lib/icons/VK'
 
 
+import api from 'lib/api';
+
 import MainLayout from 'components/MainLayout'
 
 import Link from 'next/link'
 import Chat from 'components/Chat'
 
 export default function AboutMe() {
-
+  console.log(api.getReviews())
   return (
     <MainLayout title={"AboutMe"} className={"AboutMe"}>
       <div className={st.AboutMe}>
@@ -65,3 +67,10 @@ export default function AboutMe() {
   )
 }
 
+
+AboutMe.getInitialProps  = async () => {
+  const store = await api.getReviews();
+  console.log(2)
+  // console.log(store)
+  return {  }
+}
