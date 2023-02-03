@@ -5,24 +5,26 @@
   "description": "A Strapi application",
   "scripts": {
     "develop": "strapi develop",
-    "start": "strapi start ./server.js",
+    "start": "strapi start",
     "build": "strapi build",
     "strapi": "strapi"
   },
+  "devDependencies": {},
   "dependencies": {
-    "@strapi/plugin-i18n": "4.6.0",
+    "@strapi/strapi": "4.6.0",
     "@strapi/plugin-users-permissions": "4.6.0",
-    "@strapi/strapi": "^4.6.0",
+    "@strapi/plugin-i18n": "4.6.0",
     "better-sqlite3": "7.4.6"
   },
   "author": {
     "name": "A Strapi developer"
   },
   "strapi": {
-    "uuid": "383f2f2f-7296-44b7-8e70-a78e670e9d79"
+    "uuid": "55b3828b-48a7-45a1-b20b-b4872bff2da4"
   },
   "engines": {
-    "node": ">=14.19.1 <=18.x.x"
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
   },
   "license": "MIT"
 }
