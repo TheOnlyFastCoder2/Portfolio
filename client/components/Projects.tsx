@@ -47,7 +47,7 @@ function Project (props: IProject) {
             <a href={props.website} target={"_blank"}>сайт</a>
           </button>
         </div>
-        <button className={st.info}>о проекте</button>
+        {props.aboutProject &&  <button className={st.info}>о проекте</button>}
       </div>
       <div className={st.background}>
         <img src={props.img}/> 
