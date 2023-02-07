@@ -1,11 +1,4 @@
-export interface IReviews {
-  name: string,
-  text: string,
-  typeTask: string,
-  score: number,
-}
-
-export interface IProjects {
+export interface IProject {
   title: string,
   img: string,
   git: string,
@@ -13,7 +6,6 @@ export interface IProjects {
 }
 
 export default interface IState {
-  reviews: IReviews[],
-  projects: IProjects[],
+  projects: IProject[],
 }
 

@@ -2,46 +2,37 @@
 
 .Nav {
   display: flex;
-  justify-content: flex-start;
-  width: min(1684px,95%);
-
-  height: 39px;
-  margin: 40px auto;
-  padding: 0 30px; // +10px
-
-  a {
-    text-decoration: none;
-    outline: none;
-  }
+  justify-content: center;
+  align-items: center ;
+  gap: 0 40px;
+  height: 84px;
+  background-color: $c_dark900;
+  list-style-type: none;
 
   li {
+    display: flex;
     position: relative;
-    width: 134px; 
-    height: 39px;
-    transform: skew(-30deg);
-    border: 0.2px solid $c_dark900;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: $c_light900;
+    z-index: 999;
+    text-transform: uppercase;
     cursor: pointer;
 
-    &:not(:first-child) {border-left: none;}
-    
-    
-    &.active {
-      background-color:  $c_dark900;
-      &::before {
-        color: $c_light900;
-      }
-    }
-    
-    &::before {
-      content: attr(data-text);
-      width: 100%;
-      height: 100%;
-      display: flex;
-      color:  $c_dark900;
-      transform: skew(30deg);
-      justify-content: center;
-      align-items: center;
-    }
+    // transition: opacity $transition;
+    // &:hover {opacity: 0.5;}
+
+    // &.active::before {
+    //   content: "";
+    //   position: absolute;
+    //   top: calc(100% + 10px);
+    //   display: block;
+    //   width: 45px;
+    //   height: 3px;
+    //   background-color: $c_active900;
+    // }
   }
 }
 

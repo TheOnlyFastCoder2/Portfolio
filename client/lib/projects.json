@@ -1,25 +1,20 @@
-
-
-{
-  "reviews": [],
-  "projects": [
-    {
-      "title": "TrainerBrain",
-      "img": "https://user-images.githubusercontent.com/60759188/210115599-a0380659-f8a9-4296-a3a6-527d0edfb783.png",
-      "git": "https://github.com/TheOnlyFastCoder2/TrainerBrain/",
-      "website": "https://trainer-brain.vercel.app/"
-    },
-    {
-      "title": "DNB",
-      "img": "https://user-images.githubusercontent.com/60759188/210270546-a963a477-2c9c-4890-b148-44e900aca252.png",
-      "git": "https://github.com/TheOnlyFastCoder2/DynamicKeyBoarding/",
-      "website": "https://dynamic-key-boarding.vercel.app/"
-    },
-    {
-      "title": "FoodMarket",
-      "img": "https://user-images.githubusercontent.com/60759188/215345564-4b72df66-f0ba-41ca-bd31-076ad0a23e16.png",
-      "git": "https://github.com/TheOnlyFastCoder2/FoodPOSDark",
-      "website": "https://food-pos-dark-murex.vercel.app/"
-    }
-  ]
-}
+[
+  {
+    "title": "TrainerBrain",
+    "img": "https://user-images.githubusercontent.com/60759188/210115599-a0380659-f8a9-4296-a3a6-527d0edfb783.png",
+    "git": "https://github.com/TheOnlyFastCoder2/TrainerBrain/",
+    "website": "https://trainer-brain.vercel.app/"
+  },
+  {
+    "title": "DNB",
+    "img": "https://user-images.githubusercontent.com/60759188/210270546-a963a477-2c9c-4890-b148-44e900aca252.png",
+    "git": "https://github.com/TheOnlyFastCoder2/DynamicKeyBoarding/",
+    "website": "https://dynamic-key-boarding.vercel.app/"
+  },
+  {
+    "title": "FoodMarket",
+    "img": "https://user-images.githubusercontent.com/60759188/215345564-4b72df66-f0ba-41ca-bd31-076ad0a23e16.png",
+    "git": "https://github.com/TheOnlyFastCoder2/FoodPOSDark",
+    "website": "https://food-pos-dark-murex.vercel.app/"
+  }
+]

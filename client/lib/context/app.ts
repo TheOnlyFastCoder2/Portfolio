@@ -1,8 +1,8 @@
-import React, { createContext, useState } from "react";
+import React, {createContext} from "react";
+
 import IStore from 'lib/api/IStore';
 
 export const initialState: IStore  = {
-  reviews: [],
   projects: []
 }
 

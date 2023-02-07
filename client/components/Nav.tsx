@@ -1,22 +1,18 @@
 import st from 'styles/components/Nav.module.scss'
-import Link from 'next/link'
-import { useRouter } from 'next/router'
+
+import SliderContext from 'lib/context/SliderContext';
+import { useContext } from 'react';
+
+
 
 export default function () {
-  const route = useRouter();
-
-  function isActive(pathName: string): string {
-    return route.pathname ===  pathName ? st.active : undefined;
-  }
+  const [,setSection] = useContext(SliderContext);
 
   return (
     <ul className={st.Nav}>
-      <Link href={'/'}>
-        <li  className={isActive('/')} data-text={"Проекты"}/>
-      </Link>
-      <Link href={'/AboutMe'}>
-        <li className={isActive('/AboutMe')}data-text={"О себе"}/>
-      </Link>
+      <li onClick={() => setSection('Header')}>Главная</li>
+      <li onClick={() => setSection('Projects')}>Проекты</li>
+      <li onClick={() => setSection('AboutMe')}>О себе</li>
     </ul>
   )
 }

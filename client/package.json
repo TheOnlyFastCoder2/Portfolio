@@ -12,10 +12,12 @@
   },
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^3.4.0",
+    "@types/react-scroll": "^1.8.6",
     "axios": "^1.2.6",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-scroll": "^1.8.9"
   },
   "devDependencies": {
     "@types/node": "18.11.18",

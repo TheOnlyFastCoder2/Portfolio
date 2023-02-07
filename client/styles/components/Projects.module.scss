@@ -1,96 +1,156 @@
 @import '../variables';
 
 .Projects {
-  display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
 
-  max-height: 900px;
-  overflow-y: scroll;
-  padding-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 100%;
+  // display: none;
+  @extend %HomeProps;
+  @extend %activSection;
 
-  .project {
-    display: flex;
-    flex-direction: column;
-    height: 245px;
-    border-radius: $radius900;
-    border-bottom: 0.2px solid rgba($color:  $c_dark900, $alpha: 0.5);
-    overflow: hidden;;
-    
-    &:hover .main > img{
-      opacity: 0.8;
-    }
+  overflow: hidden;
 
-    .main {
-      flex: 1;
-      background-color: dark;
-      height: 189px;
-      background-color: $c_dark900;
-      overflow: hidden;
-      cursor: pointer;
-      img {
-        width: 100%;
-        opacity: 0.5;
-        transition: opacity 0.3s;
-      }
-    }
+  .particle {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    overflow: hidden;
 
-    .footer {
-      display: flex;
-      gap: 20px;
-      padding: 0 20px;
+    img {
       position: relative;
-      color: $c_dark900;
-      background-color: $c_light900;
-      height: 56px;
-      box-shadow: 0 -20px 2vh -0.7vw rgba(0,0,0,0.3);
-      .name {
-        position: absolute;
-        left:0;
-        bottom:100%;
-        padding: 10px;
-        height: 39px;
-        background-color: $c_light900;
-        border-top-right-radius: $radius800;
-        box-shadow: 0 -10px 2vh -0.7vw rgba(0,0,0,0.3);
-        span {
-          font-size: 16px;
-          font-weight: 800;
+      width: 100%;
+    }
+  }
+
+  .rightSide {
+    padding-top: 37px;
+    height: 100%;
+    & > .container {
+      position: relative;
+      display: grid;
+      gap: 16px 19px;
+      grid-template-columns: repeat(2,491px);
+      max-height:100%;
+      overflow-y:scroll;
+      padding-bottom: 80px;
+    }
+
+    .Project {
+      position: relative;
+      border-radius: $border900;
+
+      .background {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+        }  
+      }
+
+      &:hover {
+        & > .panel {
+          opacity: 1;
         }
       }
 
-      .network {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        font-size: 16px;
-        font-weight: 800;
-        color: $c_dark900;
-        text-decoration: none;
-        cursor: pointer;
-        
-        svg {
-          * {fill: $c_dark900;}
-          transition: 0.4s;
-        }
-        &:hover svg{
-          transform: scale(1.2);
+      & > .panel {
+        opacity: 0;
+        position: absolute;
+        top:0;left:0;
 
+        width: 100%;
+        height: 100%;
+        display: flex;
+        gap: 17px 0;
+        justify-content: flex-end;
+        flex-direction: column;
+
+        padding:20px;
+        background-color: rgba($color: #000000, $alpha: 0.6);
+        transition: $transition;
+        cursor: pointer;
+
+        & > .wrapper {
+          display: flex;
+          gap: 0 8.5px;
+        }
+
+        button {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          height: 52px;
+
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 40px;
+          border: none;
+          border-radius: 0;
+
+          a {
+            width: 100%;
+            height: 100%;
+            color: $c_dark900;
+            text-decoration: none;
+          }
+
+          a, &  {
+    
+            $color: $c_dark900;
+            background-color: $c_light900;
+            cursor: pointer;
+            transition: color $transition;
+
+            &:hover {
+              color: $c_active900;
+            }
+          }
         }
       }
     }
   }
 
-  @media only screen and (max-width:1640px) {
-    grid-template-columns: repeat(3, 1fr);
+  @media  only screen and (max-width: 1820px){
+    flex-direction: column;
+    justify-content:flex-start;
+    
+    .particle {display: none;}
+    .leftSide { padding-top: 20px;}
+
+    .rightSide {
+      padding-right: 0;
+      & > .container {
+        grid-template-columns: repeat(auto-fill,min(491px , 100%));
+        justify-content: center;
+      }
+    }
   }
 
-  @media only screen and (max-width:1120px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  @media only screen and (max-width:720px) {
-    grid-template-columns: repeat(1, 1fr);
+  @media  only screen and (max-width: 610px){
+    .rightSide {
+      & > .container {
+        grid-template-columns: repeat(auto-fit,1fr);
+        // grid-template-rows: repeat(4,1fr);
+      }
+      .Project {
+        position: relative;
+        width: 100%;
+        & > .panel {
+          padding: 20px 40px;
+          button {
+            height: 42px;
+            font-size: 20px;
+          }
+        }
+      }
+    }
   }
 }
+
 

@@ -1,42 +1,58 @@
-
-import SVGGithub from 'lib/icons/Github'
-import SVGWebsite from 'lib/icons/Website'
 import st from 'styles/components/Projects.module.scss'
-import Link from 'next/link';
 
-import { AppContext, TAppContext  } from 'lib/context/app'
-import React, { useContext } from 'react';
-import JSONStore from 'lib/projects.json'
+import {AppContext} from 'lib/context/app';
+import SliderContext from 'lib/context/SliderContext';
+import { useContext } from 'react';
+import { IProject } from 'lib/api/IStore';
 
-export default function () {
-  // const [store] = useContext<TAppContext>(AppContext);
+
+export default function  Projects () {
+  const [appStore] = useContext(AppContext);
+  const [section] = useContext(SliderContext);
+  const isActive = section === 'Projects' || section === '';
 
   return (
-    <div className={st.Projects}>
-      {JSONStore.projects.map((cardProject,i) => {
-        return (
-          <div className={st.project} key={i}>
-            <Link href={cardProject.website} target="_blank">
-              <div className={st.main}>
-                <img src={cardProject.img} alt="" />
-              </div>
-            </Link>
-            <div className={st.footer}>
-              <div className={st.name}>
-                <span>{cardProject.title}</span>
-              </div>
-              <a target="_blank" href={cardProject.git} className={st.network}>
-                <span>Github</span>
-                <SVGGithub/>
-              </a>
-              <a target="_blank" href={cardProject.website} className={st.network}>
-                <span>Website</span>
-                <SVGWebsite/>
-              </a>
-            </div>
-          </div>
-        ) 
-      })}
+    <div className={`${st.Projects} ${isActive ? st.activSection : ''}`} id="Projects">
+      <div className={st.leftSide}>
+        <h2>Проекты</h2>
+        <div className={st.particle}>
+          <img src="./imgs/Islang.png"/>
+        </div>
+      </div>
+
+      <div className={st.rightSide}>
+        {/* <div className={st.fitler}></div> */}
+        <div className={st.container}>
+          {
+            appStore.projects.map((props, i) => {
+              return <Project key={i} {...props}/>
+            })
+          }
+        </div>
+      </div>
     </div>
   )
 }
+
+
+function Project (props: IProject) {
+  return (
+    <div className={st.Project}>
+      <div className={st.panel}>
+        <div className={st.wrapper}>
+          <button className={st.github}>
+            <a href={props.git} target={"_blank"}>гитхаб</a>
+          </button>
+          <button className={st.website}>
+            <a href={props.website} target={"_blank"}>сайт</a>
+          </button>
+        </div>
+        <button className={st.info}>о проекте</button>
+      </div>
+      <div className={st.background}>
+        <img src={props.img}/> 
+      </div>
+    </div>
+  )
+}
+

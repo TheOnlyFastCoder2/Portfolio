@@ -1,0 +1,175 @@
+@import './variables';
+
+.Home {
+  .container {
+    width: 100%;
+    height: 100%;
+    transform: translateY(0);
+    transition: transform 1s;
+    &.scrollToMain  {
+      transform: translateY(-100%);
+    }
+  }
+
+  header {
+    position: relative;
+    height: 100%;
+    // padding: 0 102px;
+  }
+
+  main {
+    height: calc(100% - 84px);
+    .inner {
+      height: 100%;
+      position: relative;
+      display: flex;
+    }
+  }
+}
+
+.Home header {
+
+  & > .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    position: relative;
+    width: min(806px , 100%);
+    padding: 0 5%;
+    padding-top: 9.5%;
+    z-index: 10;
+
+    .text {
+      color: $c_dark900;
+      margin-bottom: 86px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+      h1 {
+        font-size: 120px;
+        margin-bottom: 20px;
+      }
+
+      p {
+        max-width: 787px;
+        font-size: 35px;
+        font-weight: 400;
+      }
+    }
+   
+    & > .wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: min(100%,677px);    
+      padding: 0 5%;
+
+      .buttons {
+        display: flex;
+        gap: 5px;
+        margin-top: 11px;
+        width: 100%;
+
+
+        a , button {
+          width: 100%;
+          height: 100px;
+        }
+
+        button {
+          font-size: 25px;
+          font-weight: 400;
+          line-height: 40px;
+          color: $c_light900;
+          border:none;
+          border-radius: $radius900;
+          background-color: $c_dark900;
+          transition: background-color $transition;
+          cursor:pointer;
+
+          &:hover {
+            background-color: rgba($color: $c_light900, $alpha: 1);
+            color: $c_dark900;
+            border: 4px solid $c_dark900;
+          }
+        }
+
+        $clipValue: 20%;
+        
+        a:first-child button {
+          padding-left: calc(#{$clipValue} / 2);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, $clipValue 100%);
+        }
+        a:last-child button {
+          padding-right: calc(#{$clipValue} / 2);
+          clip-path: polygon(0 0, 100% 0, calc(100% - #{$clipValue}) 100%, 0 100%);
+        }
+      }
+    }
+  }
+
+  
+  .preview {
+    // display: none;
+    position: absolute;
+    right:0;bottom: 0;
+    width: 100%;
+
+    z-index: 1;
+     width: 53%;
+
+  }
+
+  @media  only screen and (max-width: 1820px){
+    .preview {
+      width: 120vw;
+    }
+
+    & > .wrapper {
+      margin: auto;
+      width: 100%;
+      background: $c_light900;
+      padding-left: 60px;
+      padding-right: 60px;
+      padding-bottom: 60px;
+      border-radius: 6px;
+    }
+  }
+
+  @media  only screen and (max-width: 791px){
+    & > .wrapper {
+
+      .text {
+        h1 {font-size: 10vw;}
+        p {font-size: 5vw;}
+      }
+
+      & > .wrapper > .buttons {
+        flex-direction: column;
+
+        a:first-child button , a:last-child button {
+          height: 80px;
+          padding-left: 0;
+          clip-path: none;
+        }
+      }
+    }
+  }
+
+
+  @media  only screen and (max-width: 400px){
+    .preview {
+      width: 200vw;
+    }
+  }
+}
+
+
+
+

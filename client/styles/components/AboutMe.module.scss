@@ -1,0 +1,123 @@
+@import '../variables';
+
+.AboutMe {
+  width: 100%;
+  @extend %HomeProps;
+  overflow-y: scroll;
+  
+  & > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .leftSide {
+    margin: auto;
+    width: min(100%, 856px);
+    max-width: 856px;
+    
+    .Container {
+      & > div {
+        border-left: 0.2px solid $c_dark900;
+      }
+    }
+  }
+
+  .rightSide {
+    margin: auto;
+    max-width: 795px;
+    padding-top: 37px;
+
+    .Container {
+      & > div {
+        border-right: 0.2px solid $c_dark900;
+      }
+    }
+  }
+
+  .Container {
+    width: 100%;
+    margin-bottom: 20px;
+
+
+    h3 {
+      font-size: 25px;
+      font-weight: 400;
+      letter-spacing: 0.02em;
+      margin-bottom: 20px;
+      padding: 0 2.5%;
+      text-transform: capitalize;
+    }
+
+    p {
+      width: 100%;
+      font-family: 'Roboto';
+      font-size: 20px;
+      font-weight: 300;
+      line-height: 38px;
+      letter-spacing: 0.02em;
+      text-align: justify;
+      -moz-text-align-last: justify;
+      text-align-last: justify;
+
+    }
+    & > .wrapper {
+      padding: 0 2.5%;
+    }
+  }
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    // height: 100vh;
+    gap: 40px;
+
+    @media only screen and (max-width:654px){
+      grid-template-columns: repeat(3,1fr);
+    }
+
+    @media only screen and (max-width: 445px){
+      grid-template-columns: repeat(2,1fr);
+    }
+
+    .skill {
+      text-align: center;
+
+     .icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 64px;
+        height: 64px;
+        border-radius: $radius900;
+        background: $c_dark900;
+        margin: auto;
+      }
+
+      span {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+  }
+
+  .networks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 33px;
+    width: 100%;
+    height: 78px;
+    background-color: $c_dark900;
+
+    a {
+      transition: transform 0.5s;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+   
+  }
+} 
