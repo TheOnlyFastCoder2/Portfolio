@@ -12,20 +12,20 @@
   font-style: normal;
   letter-spacing: 0.06em;
 
-  // -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
 
-  // &::-webkit-scrollbar {
-  //   position: relative;
-  //   width: 10px;               /* ширина scrollbar */
-  // }
-  // &::-webkit-scrollbar-track {
-  //   background: $c_light900;        /* цвет дорожки */
-  // }
-  // &::-webkit-scrollbar-thumb {
-  //   border-radius: 20px;       /* закругления плашки */
-  //   background-color: $c_dark900;
-  //   border: 3px solid $c_dark900;  /* padding вокруг плашки */
-  // }
+  &::-webkit-scrollbar {
+    position: relative;
+    width: 3px;               /* ширина scrollbar */
+  }
+  &::-webkit-scrollbar-track {
+    background: $c_light900;        /* цвет дорожки */
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;       /* закругления плашки */
+    background-color: $c_dark900;
+    border: 3px solid $c_dark900;  /* padding вокруг плашки */
+  }
 }
 
 #root {
