@@ -1,20 +1,29 @@
 @import '../variables';
 
 .Projects {
-
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   min-width: 100%;
-  // display: none;
+  height: 100%;
+
   @extend %HomeProps;
   @extend %activSection;
 
-  overflow: hidden;
+  & > .wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 0;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+  }
 
   .particle {
     position: absolute;
     bottom: 0;
-    left: 0;
+    right: 0;
     width: 30%;
     overflow: hidden;
 
@@ -23,32 +32,38 @@
       width: 100%;
     }
   }
-
+  
   .rightSide {
-    padding-top: 37px;
-    height: 100%;
+    width: 100%;
+    height: calc(100% - 120px);
+
     & > .container {
       position: relative;
       display: grid;
-      gap: 16px 19px;
-      grid-template-columns: repeat(2,491px);
-      max-height:100%;
+      gap: 16px;
+      height: 100%;
       overflow-y:scroll;
-      padding-bottom: 90px;
+      grid-template-columns: repeat(auto-fill,min(491px, 100%));
+      grid-template-rows: 260px;
     }
 
     .Project {
       position: relative;
       border-radius: $border900;
+      width: 491px;
+      height: 260px;
 
-      .background {
+      .background {  
         width: 100%;
         height: 100%;
         overflow: hidden;
 
         img {
-          width: 100%;
-          height: 100%;
+          max-width: 200%;
+          min-width: 100%;
+
+          max-height: 120%;
+          min-height: 100%;
         }  
       }
 
@@ -116,28 +131,17 @@
     }
   }
 
-  @media  only screen and (max-width: 1820px){
-    flex-direction: column;
-    justify-content:flex-start;
-    
-    .particle {display: none;}
+  @media  only screen and (max-width: 1820px){    
+    // .particle {display: none;}
     .leftSide { padding-top: 20px;}
 
     .rightSide {
       padding-right: 0;
-      & > .container {
-        grid-template-columns: repeat(auto-fill,min(491px , 100%));
-        justify-content: center;
-      }
     }
   }
 
   @media  only screen and (max-width: 610px){
-    .rightSide {
-      & > .container {
-        grid-template-columns: repeat(auto-fit,1fr);
-        // grid-template-rows: repeat(4,1fr);
-      }
+    .rightSide {      
       .Project {
         position: relative;
         width: 100%;

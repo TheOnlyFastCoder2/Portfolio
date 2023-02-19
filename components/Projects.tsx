@@ -13,23 +13,26 @@ export default function  Projects () {
 
   return (
     <div className={`${st.Projects} ${isActive ? st.activSection : ''}`} id="Projects">
-      <div className={st.leftSide}>
-        <h2>Проекты</h2>
-        <div className={st.particle}>
-          <img src="./imgs/Islang.png"/>
-        </div>
-      </div>
+      <h2>Проекты</h2>
+      <div className={st.wrapper}>
+        {/* <div className={st.leftSide}>
+          <div className={st.particle}>
+            <img src="./imgs/Islang.png"/>
+          </div>
+        </div> */}
 
-      <div className={st.rightSide}>
-        {/* <div className={st.fitler}></div> */}
-        <div className={st.container}>
-          {
-            appStore.projects.map((props, i) => {
-              return <Project key={i} {...props}/>
-            })
-          }
+        <div className={st.rightSide}>
+          {/* <div className={st.fitler}></div> */}
+          <div className={st.container}>
+            {
+              appStore.projects.map((props) => {
+                return <Project key={props.title+props.img} {...props}/>
+              })
+            }
+          </div>
         </div>
       </div>
+      
     </div>
   )
 }

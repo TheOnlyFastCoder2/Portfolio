@@ -4,7 +4,7 @@ import {AppContext, initialState} from 'lib/context/app';
 import { useState } from 'react';
 
 export default function App({ Component, pageProps, store}) {
-  const hookAppStore = useState(store || initialState);
+  const hookAppStore = useState(store);
 
   return (
     <AppContext.Provider value={hookAppStore}>

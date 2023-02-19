@@ -1,23 +1,23 @@
 @font-face {
 	font-family: 'Roboto'; 
 	src:
-    url(./fonts/Roboto/Roboto-Light.ttf),
-    url(./fonts/Roboto/Roboto-MediumItalic.ttf),
-    url(./fonts/Roboto/Roboto-Medium.ttf),
-    url(./fonts/Roboto/Roboto-BlackItalic.ttf),
-    url(./fonts/Roboto/Roboto-Black.ttf),
-    url(./fonts/Roboto/Roboto-BoldItalic.ttf),
-    url(./fonts/Roboto/Roboto-Bold.ttf),
-    url(./fonts/Roboto/Roboto-ThinItalic.ttf),
-    url(./fonts/Roboto/Roboto-Thin.ttf),
-    url(./fonts/Roboto/Roboto-Italic.ttf ),
-    url(./fonts/Roboto/Roboto-Regular.ttf),
+    url(fonts/Roboto/Roboto-Light.ttf),
+    url(fonts/Roboto/Roboto-MediumItalic.ttf),
+    url(fonts/Roboto/Roboto-Medium.ttf),
+    url(fonts/Roboto/Roboto-BlackItalic.ttf),
+    url(fonts/Roboto/Roboto-Black.ttf),
+    url(fonts/Roboto/Roboto-BoldItalic.ttf),
+    url(fonts/Roboto/Roboto-Bold.ttf),
+    url(fonts/Roboto/Roboto-ThinItalic.ttf),
+    url(fonts/Roboto/Roboto-Thin.ttf),
+    url(fonts/Roboto/Roboto-Italic.ttf ),
+    url(fonts/Roboto/Roboto-Regular.ttf),
   ; 
 }
 
 @font-face {
 	font-family: 'Reggae One'; 
-	src: url(./fonts/ReggaeOne-Regular.ttf);
+	src: url(fonts/ReggaeOne-Regular.ttf);
   font-display: swap;
 }
 
@@ -38,6 +38,7 @@ $border800: 2px solid rgba($color: #000000, $alpha: 0.3);
 %HomeProps {
   padding-left: 5%;
   padding-right: 5%;
+  padding-bottom: 20px;
   
   height: 100%;
   overflow-y: hidden;

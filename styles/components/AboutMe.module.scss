@@ -2,22 +2,21 @@
 
 .AboutMe {
   width: 100%;
-  @extend %HomeProps;
   overflow-y: scroll;
-  
+
+  @extend %HomeProps;
+  @extend %activSection;
+
   & > .wrapper {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px 0;
+    gap: 20px 20px;
     justify-content: space-between;
-    width: 100%;
   }
 
   .leftSide {
-    margin: auto;
     width: min(100%, 856px);
-    max-width: 856px;
-    
+    max-width: 856px;    
     .Container {
       & > div {
         border-left: 0.2px solid $c_dark900;
@@ -26,10 +25,8 @@
   }
 
   .rightSide {
-    margin: auto;
-    max-width: 795px;
-    padding-top: 37px;
-
+    flex: 1;
+    
     .Container {
       & > div {
         border-right: 0.2px solid $c_dark900;
@@ -40,7 +37,6 @@
   .Container {
     width: 100%;
     margin-bottom: 20px;
-
 
     h3 {
       font-size: 25px;
@@ -71,8 +67,8 @@
   .skills {
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    // height: 100vh;
-    gap: 40px;
+    gap: 5% 5%;
+    overflow-y: scroll;
 
     @media only screen and (max-width:654px){
       grid-template-columns: repeat(3,1fr);
