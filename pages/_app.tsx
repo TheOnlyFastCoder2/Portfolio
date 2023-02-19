@@ -1,6 +1,6 @@
 import 'styles/globals.scss'
 import api from 'lib/api/index';
-import {AppContext, initialState} from 'lib/context/app';
+import { AppContext } from 'lib/context/app';
 import { useState } from 'react';
 
 export default function App({ Component, pageProps, store}) {
