@@ -32,7 +32,6 @@
   min-width: 350px;
   margin: auto;
   background: $c_background;
-  overflow: hidden;
 
   @media screen and (orientation:portrait) { 
     $pageHSize: 100vh;
@@ -47,7 +46,7 @@
     width: 100%;
     height: $pageHSize;
     margin:0 auto;
-    overflow-x: hidden;
+    overflow: hidden;
   }
 }
 
